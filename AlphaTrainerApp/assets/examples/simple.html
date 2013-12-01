@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Streamgraph</title>
+<style>
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  position: relative;
+  width: 960px;
+}
+
+button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+</style>
+
+<h1>Simple example</h1>
+
+
+Lets call android :) ->
+<input type="button" value="Say hello" onClick="showAndroidToast('Hello Android!')" /> <br />
+
+<script>
+    function showAndroidToast(toast) {
+        Android.showToast(toast);
+    }
+</script>
+
+
+We can also log:
+<script>
+
+console.log("ping from javascript");
+
+function callMeFromAndroid() {
+  alert("function call from android");
+}
+
+</script>

@@ -1,4 +1,0 @@
-AlphaTrainerAndroid
-===================
-
-BCI neurofeedback app

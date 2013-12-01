@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 
+    
+    fragment is now embedded programmatically in onCreate()
+    
+    <fragment android:name="dk.itu.alphatrainer.ui.feedback.FragmentFeedbackBox"
+        android:id="@+id/fragment_feedback_box"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+ 	-->
+ 	
+ 	
+ 	
+ 	<!-- LAYOUTS BELOW IS FOR FULLSCREEN FUNCTIONALITY, SEE  -->
+ 	
+ 	<RelativeLayout
+ 	    android:id="@+id/fullscreen_content"
+ 		android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+ 	    
+ 	</RelativeLayout>
+ 	 
+ 	<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+
+            <Button
+                android:id="@+id/btn_stop"
+                style="?buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/btn_cancel_training" />
+        </LinearLayout>
+        
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Alpha Trainer</string>
+    <string name="activity_calibrate_title">Calibrate</string>
+    <string name="activity_baseline_title">Baseline</string>
+    <string name="activity_feedback_title">Feedback</string>
+    <string name="activity_recordings_title">Recordings</string>
+    <string name="activity_recording_title">Recording</string>
+    <string name="activity_recordings_all_title">Recordings all</string>
+    <string name="title_activity_web_view">ActivityWebView</string>
+    <string name="title_activity_web_view_visualizations">ActivityWebViewVisualizations</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_delete_recording">Delete recording</string>
+    <string name="text_delete_recording_wrong">Delete recording didn\'t succeed</string>
+    <string name="text_delete_recording_succes">Delete recording succeed</string>
+    <string name="btn_training">Training</string>
+    <string name="btn_history">History</string>
+    <string name="btn_settings">Settings</string>
+    <string name="btn_about">About</string>
+    <string name="btn_start">Start</string>
+    <string name="btn_try_again">Try again</string>
+	<string name="btn_cancel">Cancel</string>
+    <string name="btn_cancel_training">Cancel training</string>
+    <string name="btn_wait">Wait</string>
+    <string name="btn_stop">Stop</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_recordings">Rec List</string>
+    <string name="btn_recordings_all">Rec Plot</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="calibration_description">Calibrate: \nClose your eyes and relax - a tone marks the end.</string>
+    <string name="calibration_started">Calibrate: \nStarted - relax and keep your eyes closed for 1 minute.</string>
+    <string name="calibration_done">Calibrate: \nFinished - your alpha peak is </string>
+    <string name="feedback_audio_synth_description">Objective: \nRelax and lower the pitch of that tone.</string>
+    <string name="feedback_audio_synth_description_screen">Please keep your eyes closed and relax.</string>
+    <string name="feedback_audio_clips_description">Objective: \nRelax and make fewer sounds pop up.</string>
+	<string name="feedback_audio_clips_description_screen">@string/feedback_audio_synth_description_screen</string>
+    <string name="feedback_audio_sample_description">Objective: \nRelax and lower pitch and tempo.</string>
+	<string name="feedback_audio_sample_description_screen">@string/feedback_audio_synth_description_screen</string>
+    <string name="feedback_box_description">Objective: \nRelax and turn the box green.</string>
+    <string name="feedback_colision_description">Objective: \nRelax and minimize circle movement.</string>
+    <string name="feedback_vibration_description">Objective: \nRelax and minimize the vibrations.</string>
+    <string name="feedback_vibration_description_screen">@string/feedback_audio_synth_description_screen</string>
+    <string name="baseline_description_init">Reference needed: \nAbout to measure your alpha level without feedback control.</string>
+    <string name="baseline_description_audio">Reference needed: \nRelax and close your eyes while a reference recording is performed.</string>
+    <string name="baseline_description_visual">Reference needed: \nRelax and watch the screen while a reference recording is performed.</string>
+    <string name="baseline_description_vibration">Reference needed: \nRelax, hold your phone and close your eyes while a reference recording is performed.</string>
+    <string name="feedback_description_completed">Training completed - well done!</string>
+	<string name="notification_title">Connection status:</string>
+	<string name="status_good_connection">good</string>
+	<string name="status_poor_connection">poor</string>
+	<string name="status_not_connected">bad</string>		
+	<string name="headset_error_headset_unknown_error">Problem: Unknown.</string>
+	<string name="headset_error_headset_not_found">Problem: Headset not found.</string>
+	<string name="headset_error_headset_not_paired">Problem: Headset not paired.</string>
+	<string name="headset_error_headset_not_connected">Problem: Headset not connected.</string>
+	<string name="label_day">today:</string>
+	<string name="label_week">week:</string>
+	<string name="label_month">month:</string>
+	<string name="baseline_plot_description">Most recent reference recordings:</string>
+	<string name="feedback_plot_description">Most recent training performances:</string>
+
+	<string name="notification_text">Click to select another headset</string>
+    <string name="activity_settings_title">Settings</string>
+	
+    
+    
+    
+    
+    
+    <!-- ** Preferences ** -->
+	
+    <string name="settings_fragment_title">Settings</string>
+    <string name="key_pref_headset_type">pref_headset_type</string>
+    <string name="pref_headset_type">Choose type of headset</string>
+    <string name="dummy_headset">dummy_headset</string>
+    <string name="mindwave_mobile">mindwave_mobile</string>
+    <string name="dummy_headset_title">Dummy headset</string>
+    <string name="mindwave_mobil_title">Mindwave mobil</string>
+    <string name="pref_headset_types_default">@string/dummy_headset</string>
+    <string name="key_pref_feedback_ui_type">pref_feedback_ui_type</string>
+    <string name="pref_feedback_ui_type">Choose type of feedback ui</string>
+    
+    <string name="default_feedback_ui">@string/feedback_box</string>
+    <string name="feedback_box">feedback_box</string>
+    
+    <string name="feedback_box_history">feedback_box_history</string>
+    <string name="feedback_bar">feedback_bar</string>
+    <string name="feedback_bar_history">feedback_bar_history</string>
+    <string name="feedback_bar_growing">feedback_bar_growing</string>
+    <string name="feedback_box_title">Box</string>
+    <string name="feedback_box_history_title">Box with history</string>
+    <string name="feedback_bar_title">Bar</string>
+    <string name="feedback_bar_history_title">Bar with history</string>
+    <string name="feedback_bar_growing_title">Growing bar</string>
+    <string name="feedback_vibrate">feedback_vibrate</string>
+    <string name="feedback_vibrate_title">Vibration</string>
+    <string name="feedback_collision">feedback_collision</string>
+    <string name="feedback_collision_title">Circles</string>
+    <string name="feedback_audio_synth">feedback_audio_synth</string>
+    <string name="feedback_audio_synth_title">Tone</string>
+    <string name="feedback_audio_clips">feedback_audio_clips</string>
+    <string name="feedback_audio_clips_title">Bells</string>
+    <string name="feedback_audio_sample">feedback_audio_sample</string>
+    <string name="feedback_audio_sample_title">Audio sample</string>
+    <string name="key_pref_training_length">pref_training_length</string>
+    <string name="pref_training_length_title">Choose training time</string>
+    <string name="pref_training_length_description">Its possible to set the length of each training session in minutes</string>    
+	<string name="key_pref_mode">pref_mode</string>
+	<string name="pref_mode">Choose training mode</string>
+	<string name="mode_default">mode_default</string>
+	<string name="mode_manual">mode_manual</string>
+	<string name="mode_default_title">Default Mode</string>
+	<string name="mode_manual_title">Manual Mode</string>
+	<string name="no_entry_found_user_id">NO USER ID</string>
+	
+</resources>

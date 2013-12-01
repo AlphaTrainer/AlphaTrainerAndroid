@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        
+    <!-- ** Preferences ** -->
+    <string-array name="pref_headset_types_entries">
+	<item>@string/dummy_headset_title</item>
+	<item>@string/mindwave_mobil_title</item>
+    </string-array>
+
+    <string-array name="pref_headset_types_values">
+	<item>@string/dummy_headset</item>
+	<item>@string/mindwave_mobile</item>
+    </string-array>
+    
+    <string-array name="pref_feedback_ui_types_entries">
+	<item>@string/feedback_box_title</item>
+	<item>@string/feedback_vibrate_title</item>
+	<item>@string/feedback_collision_title</item>
+	<item>@string/feedback_audio_synth_title</item>
+	<item>@string/feedback_audio_clips_title</item>
+    </string-array>
+    
+    <string-array name="pref_feedback_ui_types_values">
+	<item>@string/feedback_box</item>
+	<item>@string/feedback_vibrate</item>
+	<item>@string/feedback_collision</item>
+	<item>@string/feedback_audio_synth</item>
+	<item>@string/feedback_audio_clips</item>
+    </string-array>
+
+    
+    <!-- Well niece to have if its possible to extend pref_feedback_ui_types_values | pref_feedback_ui_types_entries -->
+    <string-array name="pref_feedback_ui_types_entries_all">
+	<item>@string/feedback_bar_title</item>
+	<item>@string/feedback_bar_history_title</item>
+	<item>@string/feedback_bar_growing_title</item>
+	<item>@string/feedback_box_title</item>
+	<item>@string/feedback_box_history_title</item>
+	<item>@string/feedback_vibrate_title</item>
+	<item>@string/feedback_collision_title</item>
+	<item>@string/feedback_audio_synth_title</item>
+	<item>@string/feedback_audio_clips_title</item>
+    </string-array>
+    
+    <string-array name="pref_feedback_ui_types_values_all">
+	<item>@string/feedback_bar</item>
+	<item>@string/feedback_bar_history</item>
+	<item>@string/feedback_bar_growing</item>
+	<item>@string/feedback_box</item>
+	<item>@string/feedback_box_history</item>
+	<item>@string/feedback_vibrate</item>
+	<item>@string/feedback_collision</item>
+	<item>@string/feedback_audio_synth</item>
+	<item>@string/feedback_audio_clips</item>
+        
+    </string-array>
+    
+    <string-array name="pref_mode_entries">
+	<item>@string/mode_default_title</item>
+	<item>@string/mode_manual_title</item>
+    </string-array>
+
+    <string-array name="pref_mode_values">
+	<item>@string/mode_default</item>
+	<item>@string/mode_manual</item>
+    </string-array>
+
+</resources>

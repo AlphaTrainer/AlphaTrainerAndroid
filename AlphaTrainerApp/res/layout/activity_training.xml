@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ViewGroupRoot"
+    android:paddingBottom="@dimen/alpha_trainer_vertical_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <fragment
+        class="dk.itu.alphatrainer.ui.FragmentConnectionStatus"
+        android:id="@+id/fragment_connection_status"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true" />
+    
+    <View
+        android:id="@+id/view_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/fragment_connection_status"
+        android:background="@color/Black" />
+    
+    
+    <!-- for manual mode -->
+    
+    <Button 
+        android:id="@+id/btn_calibrate"
+        style="@style/Button.Navigation.MarginHorizontal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_baseline"
+        android:text="Calibrate" />
+    
+    <Button 
+        android:id="@id/btn_baseline"
+        style="@style/Button.Navigation.MarginHorizontal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_feedback"
+        android:text="Baseline" />
+    
+    <Button 
+        android:id="@id/btn_feedback"
+        style="@style/Button.Navigation.MarginHorizontal"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Feedback" />
+    
+    
+    <!-- for default mode -->
+    
+    <TextView
+	    android:id="@+id/txt_description"
+	    style="@style/Text.Big.MarginHorizontal.MarginVertical"
+	    android:visibility="gone"
+	    android:enabled="false"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/view_separator" />
+    
+    <Button 
+        android:id="@+id/btn_start_next_activity"
+        style="@style/Button.Navigation.MarginHorizontal"
+        android:visibility="gone"
+        android:enabled="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btn_wait" />
+    
+    
+    
+</RelativeLayout>

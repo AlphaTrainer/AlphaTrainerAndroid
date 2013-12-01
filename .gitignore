@@ -1,0 +1,69 @@
+#
+# Android
+#
+
+# built application files
+# for now let apk go through
+#*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Eclipse project files
+.classpath
+.project
+
+
+
+#
+# C++ / OpenCV
+#
+# Compiled Object files
+*.slo
+*.lo
+## NIECETOHAVE: for now commit this one or is so enough to build the app ?
+#*.o
+
+# Compiled Dynamic libraries
+# NIECETOHAVE: for now commit so so its possible to build and app within ndk build... 
+# whats the regular sane approach ?
+#*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Build target folder
+build/*
+
+
+# various 
+.cproject
+.project
+.settings
+build/
+
+
+
+
+#jni  specific  - we don't want the <app dir>/obj/stuff in git
+obj/
+
+#eclipse c++/android
+Debug/
+
+
+octave-core

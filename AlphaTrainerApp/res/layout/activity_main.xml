@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_root"
+    style="@style/ViewGroupRoot.PaddedHorizontal.PaddedVertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+		android:src="@drawable/alpha_lowercase_big" />
+    
+    <Button 
+        android:id="@+id/btn_training"
+        style="@style/Button.Navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_history"
+        android:text="@string/btn_training" />
+    
+    <Button 
+        android:id="@id/btn_history"
+        style="@style/Button.Navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_settings"
+        android:text="@string/btn_history" />
+    
+    <Button 
+        android:id="@id/btn_settings"
+        style="@style/Button.Navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_about"
+        android:text="@string/btn_settings" />
+    
+    
+    <!-- ABOUT BUTTON BELOW HAS BEEN REMOVED BY SETTING HEIGHT TO 0 -->
+    
+    <Button
+        android:id="@id/btn_about"
+        style="@style/Button.Navigation"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/btn_about" />
+    
+</RelativeLayout>

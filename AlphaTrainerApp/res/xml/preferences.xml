@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 
+
+ From sdk r17 and up its possible to do:
+ 
+ xmlns:picker="http://schemas.android.com/apk/res-auto"
+ 
+ instead of 
+ 
+ xmlns:picker="http://schemas.android.com/apk/res/dk.itu.alphatrainer"
+
+ This is required for the **numberpicker**
+ 
+ -->
+<PreferenceScreen 
+    xmlns:picker="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <ListPreference
+        android:key="@string/key_pref_feedback_ui_type"
+        android:title="@string/pref_feedback_ui_type"
+        android:dialogTitle="@string/pref_feedback_ui_type"
+        android:entries="@array/pref_feedback_ui_types_entries"
+        android:entryValues="@array/pref_feedback_ui_types_values"
+        android:defaultValue="@string/default_feedback_ui" />
+
+
+	<com.michaelnovakjr.numberpicker.NumberPickerPreference
+            android:key="@string/key_pref_training_length"
+            android:title="@string/pref_training_length_title"
+            android:summary="@string/pref_training_length_description"
+            picker:defaultValue="@integer/default_training_length_in_minutes"
+            picker:startRange="1"
+            picker:endRange="30" />	
+
+	
+    <ListPreference
+        android:key="@string/key_pref_mode"
+        android:title="@string/pref_mode"
+        android:dialogTitle="@string/pref_mode"
+        android:entries="@array/pref_mode_entries"
+        android:entryValues="@array/pref_mode_values"
+        android:defaultValue="@string/mode_default" />
+
+    <ListPreference
+        android:key="@string/key_pref_headset_type"
+        android:title="@string/pref_headset_type"
+        android:dialogTitle="@string/pref_headset_type"
+        android:entries="@array/pref_headset_types_entries"
+        android:entryValues="@array/pref_headset_types_values"
+        android:defaultValue="@string/mindwave_mobile" />
+    
+ 
+</PreferenceScreen>

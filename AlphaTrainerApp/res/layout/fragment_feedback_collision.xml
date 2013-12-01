@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_feedback_collision_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- Note: 
+    android:background="@android:color/black"
+    was not working with a webview to it programmatically:
+    mWebView.setBackgroundColor(Color.parseColor("#000000"));
+     -->
+     <WebView
+        android:id="@+id/view_feedback_collision"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none" />
+
+</RelativeLayout>

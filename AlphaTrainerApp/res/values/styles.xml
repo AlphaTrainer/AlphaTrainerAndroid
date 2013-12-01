@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+        
+        
+        General style / theme overview:
+        
+        http://developer.android.com/guide/topics/ui/themes.html
+
+        Styles overview:
+        
+        https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/styles.xml
+        
+        Themes overview:
+        
+        https://android.googlesource.com/platform/frameworks/base/+/refs/heads/master/core/res/res/values/themes.xml
+        
+    -->
+    
+    <style name="AppBaseTheme" parent="android:Theme.Black">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->        
+    </style>
+    
+    
+    <style name="ThemeHomescreen" parent="AppTheme">
+		<item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ThemeFullscreen" parent="AppTheme">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="buttonBarStyle">@style/ButtonBar</item>
+        <item name="buttonBarButtonStyle">@style/ButtonBarButton</item>
+    </style>
+
+    <style name="ButtonBar">
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">2dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="android:background">@android:drawable/bottom_bar</item>
+    </style>
+
+    <style name="ButtonBarButton">
+    </style>
+    
+    
+    <style name="ViewGroupRoot">
+        <item name="android:background">@color/alpha_trainer_background</item>
+    	<item name="android:windowBackground">@color/alpha_trainer_background</item>
+    	<item name="android:colorBackground">@color/alpha_trainer_background</item>
+    </style>
+    
+    <style name="ViewGroupRoot.PaddedHorizontal">
+    	<item name="android:paddingLeft">@dimen/alpha_trainer_horizontal_margin</item>
+    	<item name="android:paddingRight">@dimen/alpha_trainer_horizontal_margin</item>
+    </style>
+    
+    <style name="ViewGroupRoot.PaddedVertical">
+    	<item name="android:paddingTop">@dimen/alpha_trainer_vertical_margin</item>
+    	<item name="android:paddingBottom">@dimen/alpha_trainer_vertical_margin</item>
+    </style>
+    
+    <style name="ViewGroupRoot.PaddedHorizontal.PaddedVertical">
+        <item name="android:paddingTop">@dimen/alpha_trainer_vertical_margin</item>
+    	<item name="android:paddingBottom">@dimen/alpha_trainer_vertical_margin</item>
+    </style>
+    
+    
+    <style name="Text">
+        <item name="android:textColor">@color/Black</item>
+    </style>
+    
+    <style name="Text.Big">
+        <item name="android:textSize">38sp</item>
+    </style>
+    
+    <style name="Text.Big.MarginHorizontal">
+    	<item name="android:layout_marginLeft">@dimen/alpha_trainer_horizontal_margin</item>
+    	<item name="android:layout_marginRight">@dimen/alpha_trainer_horizontal_margin</item>
+    </style>
+    
+    <style name="Text.Big.MarginVertical">
+    	<item name="android:layout_marginTop">@dimen/alpha_trainer_vertical_margin</item>
+    	<item name="android:layout_marginBottom">@dimen/alpha_trainer_vertical_margin</item>
+    </style>
+    
+    <style name="Text.Big.MarginHorizontal.MarginVertical">
+        <item name="android:layout_marginTop">@dimen/alpha_trainer_vertical_margin_2</item>
+    	<item name="android:layout_marginBottom">@dimen/alpha_trainer_vertical_margin</item>
+    </style>
+    
+    <style name="Text.ListItem">
+        <item name="android:textColor">@color/GhostWhite</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    
+    
+    <style name="Text.History">
+        <item name="android:textColor">@color/Gray</item>
+    </style>
+    
+    <style name="Text.History.Performance">
+        <item name="android:textColor">@color/Black</item>
+    </style>
+    
+    <style name="Text.History.Label">
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">right</item>
+    </style>
+    
+    <style name="Text.History.Performance.Day">
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">58sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    
+    <style name="Text.History.Performance.WeekMonth">
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">30sp</item>
+        <item name="android:gravity">left</item>
+    </style>
+    
+    <style name="Text.History.PlotDescription">
+        <item name="android:padding">2dp</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    
+    
+    <style name="Button">
+        <item name="android:textColor">@color/GhostWhite</item>
+        <item name="android:background">@drawable/selector_button_navigation</item>
+    </style>
+    
+    <style name="Button.Navigation">
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textSize">28sp</item>
+    </style>
+    
+    <style name="Button.Navigation.MarginHorizontal">
+    	<item name="android:layout_marginLeft">@dimen/alpha_trainer_horizontal_margin</item>
+    	<item name="android:layout_marginRight">@dimen/alpha_trainer_horizontal_margin</item>
+    </style>
+    
+    
+    <style name="ListItem">
+        <item name="android:background">@drawable/selector_listitem</item>
+    </style>
+    
+    
+    <style name="Load">
+    </style>
+    
+    <style name="Load.Layout">
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+    </style>
+    
+    <style name="Load.Text">
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:textColor">@color/White</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    
+    <style name="FeedbackText">
+        <item name="android:textColor">@color/GhostWhite</item>
+    </style>
+    
+    <style name="FeedbackText.Big">
+        <item name="android:textSize">42sp</item>
+    </style>
+    
+    <style name="FeedbackText.Big.MarginVertical">
+    	<item name="android:layout_marginLeft">@dimen/alpha_trainer_horizontal_margin</item>
+    	<item name="android:layout_marginRight">@dimen/alpha_trainer_horizontal_margin</item>    
+    </style>
+    
+    <style name="FeedbackText.Big.MarginVertical.MarginHorizontal">
+        <item name="android:layout_marginTop">@dimen/alpha_trainer_vertical_margin</item>
+    	<item name="android:layout_marginBottom">@dimen/alpha_trainer_vertical_margin</item>
+    </style>
+    
+
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_feedback_audio_synth_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Black" >
+    
+<!--     NIECETOHAVE: well shouldnt the ^ color be done with style // theme... -->
+    
+    <TextView
+	    android:id="@+id/view_feedback_audio_synth"
+	    style="@style/FeedbackText.Big.MarginVertical.MarginHorizontal"
+	    android:text="@string/feedback_audio_synth_description_screen"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" />
+    
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <item type="integer" name="default_training_length_in_minutes" format="integer">5</item>
+   
+
+</resources>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_feedback_vibrate_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/Black">
+    
+<!--     NIECETOHAVE: well shouldnt the ^ color be done with style // theme... -->
+
+    <TextView
+        android:id="@+id/view_feedback_vibrate"
+        style="@style/FeedbackText.Big.MarginVertical.MarginHorizontal"
+        android:text="@string/feedback_vibration_description_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+</RelativeLayout>
