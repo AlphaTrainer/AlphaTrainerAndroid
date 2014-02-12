@@ -38,7 +38,7 @@ local.properties
 # Compiled Dynamic libraries
 # NIECETOHAVE: for now commit so so its possible to build and app within ndk build... 
 # whats the regular sane approach ?
-#*.so
+*.so
 *.dylib
 
 # Compiled Static libraries

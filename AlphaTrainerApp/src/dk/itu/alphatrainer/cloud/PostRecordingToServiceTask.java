@@ -102,6 +102,9 @@ public class PostRecordingToServiceTask extends AsyncTask<Integer, Void, Void> {
 		int index = 0;
 		do {
 			
+			
+			Log.d(TAG, "SERVICE_URL: " + SERVICE_URL);			
+			
 			recordingId=ids[index];
 			// get a recording including all alpha levels
 			Recording r = App.getInstance().getDAO().getRecording(recordingId, true);

@@ -1,5 +1,5 @@
 # non rooting approach to pull db - requires app in debug mode
-adb -d shell 'run-as dk.itu.alphatrainer \
+adb -d shell 'run-as dk.itu.alphatrainer chmod 666 \
 cat /data/data/dk.itu.alphatrainer/databases/AlphaTrainerAppDB > /sdcard/AlphaTrainerAppDB.sql'
 adb -d pull /sdcard/AlphaTrainerAppDB.sql /tmp/
 ls /tmp/AlphaTrainerAppDB.sql
