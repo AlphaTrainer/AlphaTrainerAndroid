@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- values-normal/styles.xml -->
+
+<resources>
+    
+    <!-- this should prevent text overflow in "txt_description" in activity_training.xml -->
+    <style name="Text.Big">
+        <item name="android:textSize">28sp</item>
+    </style>
+    
+</resources>

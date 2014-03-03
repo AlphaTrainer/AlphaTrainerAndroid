@@ -146,7 +146,7 @@ public class ActivityTraining extends FragmentActivityLifecycleManagementFullscr
 					startBaseline();
 				}
 			});
-				
+		
 		}
 		// if user is ready to actual training
 		else {
@@ -285,7 +285,7 @@ public class ActivityTraining extends FragmentActivityLifecycleManagementFullscr
 	
 	@Override
 	protected void onNewIntent(Intent intent) {
-		// after this, getIntent() should always return the last received intent
+		// lines below should ensure that getIntent() always returns the last received intent
 		
 		Log.d(TAG, "onNewIntent()");
 		
