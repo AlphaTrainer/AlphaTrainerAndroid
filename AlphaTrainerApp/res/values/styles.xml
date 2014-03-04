@@ -85,7 +85,7 @@
     </style>
     
     <style name="Text.Big">
-        <item name="android:textSize">38sp</item>
+        <item name="android:textSize">28sp</item>
     </style>
     
     <style name="Text.Big.MarginHorizontal">
@@ -106,7 +106,7 @@
     <style name="Text.ListItem">
         <item name="android:textColor">@color/GhostWhite</item>
         <item name="android:padding">12dp</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:gravity">left</item>
     </style>
     
@@ -121,25 +121,25 @@
     
     <style name="Text.History.Label">
         <item name="android:padding">2dp</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:gravity">right</item>
     </style>
     
     <style name="Text.History.Performance.Day">
         <item name="android:padding">2dp</item>
-        <item name="android:textSize">58sp</item>
+        <item name="android:textSize">46sp</item>
         <item name="android:gravity">left</item>
     </style>
     
     <style name="Text.History.Performance.WeekMonth">
         <item name="android:padding">2dp</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:textSize">22sp</item>
         <item name="android:gravity">left</item>
     </style>
     
     <style name="Text.History.PlotDescription">
         <item name="android:padding">2dp</item>
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">12sp</item>
     </style>
     
     
@@ -149,9 +149,9 @@
     </style>
     
     <style name="Button.Navigation">
-        <item name="android:padding">12dp</item>
-        <item name="android:layout_marginTop">16dp</item>
-        <item name="android:textSize">28sp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:layout_marginTop">12dp</item>
+        <item name="android:textSize">22sp</item>
     </style>
     
     <style name="Button.Navigation.MarginHorizontal">
@@ -187,7 +187,7 @@
     </style>
     
     <style name="FeedbackText.Big">
-        <item name="android:textSize">42sp</item>
+        <item name="android:textSize">34sp</item>
     </style>
     
     <style name="FeedbackText.Big.MarginVertical">
