@@ -165,7 +165,7 @@ public class MindWaveMobile implements IHeadsetManagement {
 	@Override
 	public void stopDataStream() {
 		
-		// NIECETOHAVE: only stop here when we have an application wide headset
+		// NICETOHAVE: only stop here when we have an application wide headset
 		if (tgDevice != null) { 
 			tgDevice.stop();
 			tgDevice.close();
