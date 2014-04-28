@@ -84,7 +84,9 @@ public class SessionManager {
      * Get feedback baseline duration (in seconds)
      */
     public int getBaselineDuration() {
-    	return getFeedbackDuration();
+    	// return getFeedbackDuration();
+    	int traingInMinutes = settings.getInt(KEY_PREF_LENGTH_OF_TRAINING, context.getResources().getInteger(R.integer.default_baseline_length_in_minutes));
+    	return traingInMinutes*60;
     }
     
    /*

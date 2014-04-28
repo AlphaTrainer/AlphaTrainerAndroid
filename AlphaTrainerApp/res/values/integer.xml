@@ -2,6 +2,7 @@
 <resources>
     
     <item type="integer" name="default_training_length_in_minutes" format="integer">5</item>
+    <item type="integer" name="default_baseline_length_in_minutes" format="integer">1</item>
    
 
 </resources>
