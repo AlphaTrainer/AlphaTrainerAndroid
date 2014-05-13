@@ -74,7 +74,7 @@ import dk.itu.alphatrainer.model.Recording;
  * 
  * <p>
  * A post of a document, recording results in a response with the full data of the posted data including the 
- * id alternative post document in a Json array but then the response will be something like:
+ * id alternative post document in a Json array [ {training} ] but then the response will be something like:
  * { n: 1 } and we'll get not id.
  * 
  * Read more https://support.mongolab.com/entries/20433053-rest-api-for-mongodb
@@ -91,8 +91,8 @@ public class PostRecordingToServiceTask extends AsyncTask<Integer, Void, Void> {
 					"https://data-api.mongolab.com/v2/apis/8e9v5m4vg24d9/collections/trainings/documents"
 					: "https://data-api.mongolab.com/v2/apis/8e9v5m4vg24d9/collections/trainings/documents";
 	
-	// 10000 was to less - lets just give it some time its a mongolab sandbox so the response time might hang
-	public static final int POST_TO_SERVICE_TIMEOUT = 100000;	
+	// we are patient here concerning timeout:
+	public static final int POST_TO_SERVICE_TIMEOUT = 100000;
 	
 	@Override
 	protected Void doInBackground(Integer... ids) {
@@ -101,9 +101,6 @@ public class PostRecordingToServiceTask extends AsyncTask<Integer, Void, Void> {
 		int recordingId;
 		int index = 0;
 		do {
-			
-			
-			Log.d(TAG, "SERVICE_URL: " + SERVICE_URL);			
 			
 			recordingId=ids[index];
 			// get a recording including all alpha levels
@@ -125,7 +122,7 @@ public class PostRecordingToServiceTask extends AsyncTask<Integer, Void, Void> {
 			HttpClient httpclient = new DefaultHttpClient(httpParams);
 			*/
 			
-			// ssl friendly approch 
+			// ssl friendly approach 
 			HttpClient httpclient = getNewHttpClient();
 
 			try {
@@ -134,11 +131,13 @@ public class PostRecordingToServiceTask extends AsyncTask<Integer, Void, Void> {
 				mHttpPost.setEntity(new StringEntity(json));
 				HttpResponse response = httpclient.execute(mHttpPost);
 				int status = response.getStatusLine().getStatusCode();
-				// only do if the response is successfully
-				if (status == 200) {
+				Log.d(TAG, "status: "+status);
+				
+				// only do if the response is successfully and we get a created code 201 (api v. 2)
+				if (status == 201) {
 					String jsonResponse = EntityUtils.toString(response
 							.getEntity());
-					Log.d(TAG, "jsonResponse:"+jsonResponse);
+					Log.d(TAG, "jsonResponse: "+jsonResponse);
 					JSONObject object;
 					try {
 						object = (JSONObject) new JSONTokener(jsonResponse)
