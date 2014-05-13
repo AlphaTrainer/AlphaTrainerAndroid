@@ -12,7 +12,7 @@ import android.os.CountDownTimer;
 import android.util.Log;
 import dk.itu.alphatrainer.ActivityTraining;
 import dk.itu.alphatrainer.App;
-import dk.itu.alphatrainer.cloud.PostRecordingToServiceTask;
+import dk.itu.alphatrainer.cloud.PostRecordingToCloudTask;
 import dk.itu.alphatrainer.factories.SignalProcessorFactory;
 import dk.itu.alphatrainer.interfaces.IFeedbackUi;
 import dk.itu.alphatrainer.interfaces.IHeadsetDataListener;
@@ -132,7 +132,7 @@ public class FeedbackLogic implements ISignalProcessingListener,
   				);
 		
   		// save recording to external service
-  		new PostRecordingToServiceTask().execute(recordingId);  		
+  		new PostRecordingToCloudTask().execute(recordingId);  		
   		
 		// finally do
 		Intent mIntent = new Intent(App.getInstance(), ActivityTraining.class);

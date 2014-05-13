@@ -1,7 +1,5 @@
 package dk.itu.alphatrainer;
 
-import java.util.List;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -10,7 +8,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.Button;
-import dk.itu.alphatrainer.cloud.PostRecordingToServiceTask;
+import dk.itu.alphatrainer.cloud.PostToCloudService;
 import dk.itu.alphatrainer.settings.ActivitySettings;
 import dk.itu.alphatrainer.ui.UiUtils;
 
@@ -72,21 +70,14 @@ public class ActivityMain extends FragmentActivity {
 				startInstructions();
 			}
 		});
-		
-		
-		
-		
-		List<Integer> recordingIds = App.getInstance().getDAO().getRecordingsNotUpdatedToService();
-		Log.d(TAG, "Ok we got some recordings that are not uploaded to service yet - recordingIds: "+ recordingIds.toString());
-		for (int n : recordingIds) {
-			new PostRecordingToServiceTask().execute(n);
-		}
-		/* NIECETOHAVE: ^^ change the above to make it possible to execute with an array of ints
-		if (recordingIds != null){
-		new PostRecordingToServiceTask().execute(new int[]{3});
-  		new PostRecordingToServiceTask().execute(recordingIds.toArray());
-		}*/
-	
+
+	}
+
+
+	@Override
+	protected void onStart() {
+		super.onStart();
+		startService(new Intent(ActivityMain.this, PostToCloudService.class));
 	}
 	
 	private void startTraining() {

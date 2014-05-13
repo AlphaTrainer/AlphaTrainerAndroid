@@ -8,6 +8,9 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK"></uses-permission>
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"></uses-permission>
+
 
     <!--
         # should be the same as in the ./jni/Application.mk
@@ -144,11 +147,25 @@
         <!--
         	to run service in its own process, add arbitrary process name - e.g.:
         	android:process=":service_lifecycle_management_process"
-        	we currenlt dont use this feature
+        	we currently don't use this feature
         -->
         <service
             android:name=".ServiceLifecycleManagement"
             android:enabled="true" />
+        
+		<service 
+		    android:name="dk.itu.alphatrainer.cloud.PostToCloudService" 
+            android:stopWithTask="true" />
+		
+		<!-- scheduled service -->
+		
+		<receiver android:process=":remote" android:name="dk.itu.alphatrainer.cloud.Alarm"></receiver>
+		<receiver android:name="dk.itu.alphatrainer.cloud.AlarmAutoStart">
+		    <intent-filter>
+		        <action android:name="android.intent.action.BOOT_COMPLETED"></action>
+		    </intent-filter>
+		</receiver>
+		
         
     </application>
 
