@@ -80,9 +80,9 @@ import dk.itu.alphatrainer.model.Recording;
  * Read more https://support.mongolab.com/entries/20433053-rest-api-for-mongodb
  * 
  */
-public class PostRecordingToServiceTask extends AsyncTask<Integer, Void, Void> {
+public class PostRecordingToCloudTask extends AsyncTask<Integer, Void, Void> {
 
-	private static final String TAG = PostRecordingToServiceTask.class
+	private static final String TAG = PostRecordingToCloudTask.class
 			.getName();
 	
 	// Note: for real deployment insert right(TM) keys:
@@ -92,7 +92,7 @@ public class PostRecordingToServiceTask extends AsyncTask<Integer, Void, Void> {
 					: "https://data-api.mongolab.com/v2/apis/8e9v5m4vg24d9/collections/trainings/documents";
 	
 	// we are patient here concerning timeout:
-	public static final int POST_TO_SERVICE_TIMEOUT = 100000;
+	public static final int POST_TO_SERVICE_TIMEOUT = 1000 * 60 * 1; // Millisec * Second * Minute
 	
 	@Override
 	protected Void doInBackground(Integer... ids) {
