@@ -8,10 +8,10 @@ OPENCV_INSTALL_MODULES:=on
 # to prevent android ndk debug ‘__gnu_cxx::_Exit’ has not been declared
 # http://stackoverflow.com/questions/7209971/ndk-build-undefined-reference-to-errors-when-statically-linking-to-libxml-a
 # dind't solve my problem
-#LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
+# LOCAL_ALLOW_UNDEFINED_SYMBOLS := true
 
 # include the native opencv android lib - tested with 2.4.6:
-#include $(HOME)/dev/opencv246-android-sdk/sdk/native/jni/OpenCV.mk
+# include $(HOME)/dev/opencv246-android-sdk/sdk/native/jni/OpenCV.mk
 include $(OPENCV_ANDROID_SDK)/native/jni/OpenCV.mk
 
 

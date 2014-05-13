@@ -88,7 +88,7 @@
         android:id="@+id/plot_description_feedback"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="@dimen/history_separator_1"
         android:gravity="center_horizontal"
         android:layout_below="@id/layout_week_month"
         android:text="@string/feedback_plot_description" />
@@ -108,7 +108,7 @@
         android:id="@+id/plot_description_baseline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="@dimen/history_separator_2"
         android:gravity="center_horizontal"
         android:layout_below="@id/plot_feedback"
         android:text="@string/baseline_plot_description" />

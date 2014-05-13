@@ -43,6 +43,7 @@ public class SessionManager {
     public static final String KEY_PREF_FEEDBACK = App.getInstance().getString(R.string.key_pref_feedback_ui_type);
     public static final String KEY_PREF_LENGTH_OF_TRAINING = App.getInstance().getString(R.string.key_pref_training_length);
     public static final String KEY_PREF_MODE = App.getInstance().getString(R.string.key_pref_mode);
+    public static final String KEY_PREF_REVERSE_FEEDBACK = App.getInstance().getString(R.string.key_pref_reverse_feedback);
     public static final float NO_ENTRY_FOUND_FLOAT = -1f;
     private static final int PRIVATE_MODE = 0;
     private static final long NO_ENTRY_FOUND_LONG = -1l;
@@ -83,7 +84,9 @@ public class SessionManager {
      * Get feedback baseline duration (in seconds)
      */
     public int getBaselineDuration() {
-    	return getFeedbackDuration();
+    	// return getFeedbackDuration();
+    	int traingInMinutes = settings.getInt(KEY_PREF_LENGTH_OF_TRAINING, context.getResources().getInteger(R.integer.default_baseline_length_in_minutes));
+    	return traingInMinutes*60;
     }
     
    /*
@@ -180,6 +183,14 @@ public class SessionManager {
      */
     public String getAppMode() {
     	return settings.getString(KEY_PREF_MODE, context.getString(R.string.mode_default));
+    }
+    
+    
+    /*
+     * Get app mode
+     */
+    public boolean getReverseFeedback() {
+    	return settings.getBoolean(KEY_PREF_REVERSE_FEEDBACK, false);
     }
 
     

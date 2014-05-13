@@ -146,7 +146,7 @@ public class ActivityTraining extends FragmentActivityLifecycleManagementFullscr
 					startBaseline();
 				}
 			});
-				
+		
 		}
 		// if user is ready to actual training
 		else {
@@ -215,23 +215,24 @@ public class ActivityTraining extends FragmentActivityLifecycleManagementFullscr
 	private String getFeedbackDescription() {
 		
 		String feedbackUiType = App.getInstance().getSessionManager().getFeedbackUiType();
+		boolean reverse = App.getInstance().getSessionManager().getReverseFeedback();
 		
 		Log.d(TAG, "getFeedbackDescription() - feedbackUiType: " + feedbackUiType);
 		
 		if (feedbackUiType.equals(getString(R.string.feedback_audio_clips))) {
-			return getString(R.string.feedback_audio_clips_description);
+			return reverse ? getString(R.string.feedback_audio_clips_description_reverse) : getString(R.string.feedback_audio_clips_description);
 		}
 		else if (feedbackUiType.equals(getString(R.string.feedback_audio_synth))) {
-			return getString(R.string.feedback_audio_synth_description);
+			return reverse ? getString(R.string.feedback_audio_synth_description_reverse) : getString(R.string.feedback_audio_synth_description);
 		}
 		else if (feedbackUiType.equals(getString(R.string.feedback_vibrate))) {
-			return getString(R.string.feedback_vibration_description);
+			return reverse ? getString(R.string.feedback_vibration_description_reverse) : getString(R.string.feedback_vibration_description);
 		}
 		else if (feedbackUiType.equals(getString(R.string.feedback_collision))) {
-			return getString(R.string.feedback_colision_description);
+			return reverse ? getString(R.string.feedback_colision_description_reverse) : getString(R.string.feedback_colision_description);
 		}
 		else if (feedbackUiType.equals(getString(R.string.feedback_box))) {
-			return getString(R.string.feedback_box_description);
+			return reverse ? getString(R.string.feedback_box_description_reverse) : getString(R.string.feedback_box_description);
 		}
 		else 
 			return "NO FEEDBACK DESCRIPTION FOUND";
@@ -240,6 +241,7 @@ public class ActivityTraining extends FragmentActivityLifecycleManagementFullscr
 	private String getBaselineDescription() {
 	
 		String feedbackUiType = App.getInstance().getSessionManager().getFeedbackUiType();
+		boolean reverse = App.getInstance().getSessionManager().getReverseFeedback();
 		
 		Log.d(TAG, "getBaselineDescription() - feedbackUiType: " + feedbackUiType);
 		
@@ -285,7 +287,7 @@ public class ActivityTraining extends FragmentActivityLifecycleManagementFullscr
 	
 	@Override
 	protected void onNewIntent(Intent intent) {
-		// after this, getIntent() should always return the last received intent
+		// lines below should ensure that getIntent() always returns the last received intent
 		
 		Log.d(TAG, "onNewIntent()");
 		
@@ -296,7 +298,7 @@ public class ActivityTraining extends FragmentActivityLifecycleManagementFullscr
 	@Override
 	public void onConnectionStatusUpdate(int connectionStatus) {
 
-		Log.d(TAG, "onConnectionStatusUpdate(int connectionStatus): "+connectionStatus);
+		Log.d(TAG, "onConnectionStatusUpdate(int connectionStatus): " + connectionStatus);
 		
 		String msg;
 		if (connectionStatus == HeadsetManager.CONNECTION_STATUS_NOT_FOUND 

@@ -44,6 +44,7 @@ public class FeedbackLogic implements ISignalProcessingListener,
 	private float alphaLevelSum;
 	private boolean stopped = false;
 	private int secondsLengthSeconds;
+	private boolean reverse;
 
 	public FeedbackLogic(IFeedbackUi feedbackUi, int seconds, boolean isBaseline) {
 		
@@ -53,6 +54,7 @@ public class FeedbackLogic implements ISignalProcessingListener,
 		this.feedbackUi = feedbackUi;
 		alphaPeakFq = App.getInstance().getSessionManager().getAlphaPeakFrequency();
 		sampleRate = App.getInstance().getHeadsetManager().getHeadset().getSampleRate();
+		reverse = App.getInstance().getSessionManager().getReverseFeedback();
 
 		dataRecorded = new float[App.getInstance().getHeadsetManager().getHeadset().getNrOfChannels()][];
 		float[] alphaLevelMinMax = App.getInstance().getSessionManager().getAlphaLevelMinMax();
@@ -191,7 +193,7 @@ public class FeedbackLogic implements ISignalProcessingListener,
 				feedbackUi.drawFeedback(getRandomNormalizedAlphaLevel());
 			}
 			else {
-				feedbackUi.drawFeedback(normalizedAlphaLevel);
+				feedbackUi.drawFeedback( reverse ? 100 - normalizedAlphaLevel : normalizedAlphaLevel);
 			}
 
 		} catch (Exception e) {
