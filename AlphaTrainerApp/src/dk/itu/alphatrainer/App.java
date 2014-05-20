@@ -32,7 +32,7 @@ public class App extends Application {
 
 	private static final String TAG = App.class.getName();
 	private static final boolean MANUAL_MODE_DISABLED = false;
-	private static final boolean USE_TEST_DATABASE = true;
+	private static final boolean USE_TEST_DATABASE = false;
 	private static App sInstance;
 	private static Context appContext;
 	private static Date date = new Date();
